@@ -17,6 +17,8 @@ Render equirectangular view
 
 #### Attributes
 
+Attribute | Description
+----------|-------------
 img | *Equirectangular image*
 alpha | *Horizontal direction of the camera*
 beta | *Vertical direction of the camera*
@@ -32,6 +34,8 @@ Targets of equirectangular view
 
 #### Attributes
 
+Attribute | Description
+----------|-------------
 alpha | *Horizontal position of the target*
 beta | *Vertical position of the target*
 distance | *Distance between target and the camera*
