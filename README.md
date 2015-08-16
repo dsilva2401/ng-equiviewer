@@ -1,6 +1,6 @@
 # Equirectangular viewer in Angular JS
 
-## Basic example
+## Basic usage
 
 ```html
 <eq-viewer img="eqrectangularImage">
