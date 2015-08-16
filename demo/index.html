@@ -1,0 +1,52 @@
+<html>
+
+    <head>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            eq-viewer {
+                position: absolute;
+                left: 50px;
+                top: 50px;
+                width: calc( 100% - 100px );
+                height: calc( 100% - 100px );
+                background: #ccc;
+            }
+        </style>
+    </head>
+
+    <body ng-app="app" ng-controller="appController">
+
+        <eq-viewer img="img">
+            <eq-marker
+                alpha="m"
+                beta="0"
+                ng-repeat="m in markers"
+                ng-click="action(m)"
+            ></eq-marker>
+        </eq-viewer>
+
+        <script src="three.min.js"></script>
+        <script src="threex.domevents.js"></script>
+        <script src="angular.min.js"></script>
+        <script src="../eq-viewer.js"></script>
+        <script>
+            (function (ang) {
+
+                ang.module('app', ['eqViewer'])
+
+                .controller('appController', function ($scope) {
+                    $scope.img = 'photo2.jpg';
+                    $scope.markers = [ 0, 45, 90, 135, 180, 225, 270, 315 ];
+                    $scope.action = function (x) {
+                        alert( x+' angle' );
+                    }
+                })
+
+            })(angular);
+        </script>
+    </body>
+
+</html>
